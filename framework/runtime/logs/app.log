@@ -1,0 +1,563 @@
+2019-01-18 22:15:39 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1044] Access denied for user 'coronado'@'%' to database 'yii2basic' in /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=loca...', 'coronado', 'coronado', NULL)
+#1 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#6 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#8 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/console/controllers/MigrateController.php(340): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(631): yii\console\controllers\MigrateController->getMigrationNameLimit()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionCreate('init')
+#14 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#15 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#16 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('create', Array)
+#17 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('create', Array)
+#18 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#19 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#20 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /home/calete/public_html/coronado/framework/yii(20): yii\base\Application->run()
+#22 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1044] Access denied for user 'coronado'@'%' to database 'yii2basic' in /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare(true)
+#4 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#6 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/console/controllers/MigrateController.php(340): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(631): yii\console\controllers\MigrateController->getMigrationNameLimit()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionCreate('init')
+#12 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#13 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#14 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('create', Array)
+#15 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('create', Array)
+#16 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#17 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#18 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /home/calete/public_html/coronado/framework/yii(20): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2019-01-18 22:15:39 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'SSH_CONNECTION' => '192.168.1.2 9726 192.168.1.5 22'
+    'ANDROID_HOME' => '/home/calete/Android/Sdk'
+    'LANG' => 'es_CO.UTF-8'
+    'SDKMAN_CANDIDATES_API' => 'https://api.sdkman.io/2'
+    'XDG_SESSION_ID' => '338'
+    'USER' => 'calete'
+    'GRADLE_HOME' => '/home/calete/.sdkman/candidates/gradle/current'
+    'PWD' => '/home/calete/public_html/coronado'
+    'HOME' => '/home/calete'
+    'SSH_CLIENT' => '192.168.1.2 9726 22'
+    'SDKMAN_DIR' => '/home/calete/.sdkman'
+    'SSH_TTY' => '/dev/pts/0'
+    'MAIL' => '/var/mail/calete'
+    'TERM' => 'xterm'
+    'SHELL' => '/bin/bash'
+    'SDKMAN_CANDIDATES_DIR' => '/home/calete/.sdkman/candidates'
+    'SHLVL' => '1'
+    'LANGUAGE' => 'es_CO:es'
+    'LOGNAME' => 'calete'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:path=/run/user/1000/bus'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'PATH' => '/home/calete/.sdkman/candidates/gradle/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/android-studio/bin:/home/calete/Android/Sdk/tools:/home/calete/Android/Sdk/platform-tools'
+    'SDKMAN_VERSION' => '5.7.3+337'
+    'SDKMAN_PLATFORM' => 'Linux64'
+    'OLDPWD' => '/home/calete/public_html'
+    '_' => 'framework/yii'
+    'PHP_SELF' => 'framework/yii'
+    'SCRIPT_NAME' => 'framework/yii'
+    'SCRIPT_FILENAME' => 'framework/yii'
+    'PATH_TRANSLATED' => 'framework/yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1547849739.7041
+    'REQUEST_TIME' => 1547849739
+    'argv' => [
+        0 => 'framework/yii'
+        1 => 'migrate/create'
+        2 => 'init'
+    ]
+    'argc' => 3
+]
+2019-01-18 22:42:56 [192.168.1.2][-][udtbekh90ufcsk58vppgv9iot2][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: app\models\Attach::file1 in /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/Component.php:154
+Stack trace:
+#0 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/db/BaseActiveRecord.php(296): yii\base\Component->__get('file1')
+#1 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/helpers/BaseHtml.php(2193): yii\db\BaseActiveRecord->__get('file1')
+#2 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/helpers/BaseHtml.php(1323): yii\helpers\BaseHtml::getAttributeValue(Object(app\models\Attach), 'file1')
+#3 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/helpers/BaseHtml.php(1470): yii\helpers\BaseHtml::activeInput('file', Object(app\models\Attach), 'file1', Array)
+#4 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/widgets/ActiveField.php(488): yii\helpers\BaseHtml::activeFileInput(Object(app\models\Attach), 'file1', Array)
+#5 /home/calete/public_html/coronado/framework/views/usuarios/_form.php(20): yii\widgets\ActiveField->fileInput()
+#6 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/View.php(336): require('/home/calete/pu...')
+#7 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/home/calete/pu...', Array)
+#8 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/calete/pu...', Array, NULL)
+#9 /home/calete/public_html/coronado/framework/views/usuarios/create.php(18): yii\base\View->render('_form', Array)
+#10 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/View.php(336): require('/home/calete/pu...')
+#11 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/home/calete/pu...', Array)
+#12 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/calete/pu...', Array, Object(app\controllers\UsuariosController))
+#13 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('create', Array, Object(app\controllers\UsuariosController))
+#14 /home/calete/public_html/coronado/framework/controllers/UsuariosController.php(81): yii\base\Controller->render('create', Array)
+#15 [internal function]: app\controllers\UsuariosController->actionCreate()
+#16 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#17 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#18 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('create', Array)
+#19 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('usuarios/create', Array)
+#20 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 /home/calete/public_html/coronado/index.php(12): yii\base\Application->run()
+#22 {main}
+2019-01-18 22:42:56 [192.168.1.2][-][udtbekh90ufcsk58vppgv9iot2][info][application] $_GET = [
+    '_pjax' => '#p0'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.2.1891217152.1533757572'
+    '__utmz' => '124869784.1537729898.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '__utma' => '124869784.1891217152.1533757572.1539272325.1544456566.3'
+    '_gid' => 'GA1.2.1672824743.1547777052'
+    '_csrf' => '1756e81b325bfeca4b1db665e46e89b8be48b8b11a959096071fb216249eaa93a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8ewBX2QW7PpYItGDTkhKEXtbsV95D9jO\";}'
+    'PHPSESSID' => 'udtbekh90ufcsk58vppgv9iot2'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php/usuarios/create'
+    'SCRIPT_URI' => 'http://coronado.colservers.com/index.php/usuarios/create'
+    'HTTP_HOST' => 'coronado.colservers.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_X_CSRF_TOKEN' => 'mXm7uRVDOU68LrbX6-S-PrIxIsMudNmF6YVFYR9-VHChHMz7TXFoGYt-xo6ikPl65lpKiGssreea03xUW0c-Pw=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#p0'
+    'HTTP_REFERER' => 'http://coronado.colservers.com/index.php/usuarios'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-CO,es;q=0.9,en-US;q=0.8,en;q=0.7,es-419;q=0.6'
+    'HTTP_COOKIE' => '_ga=GA1.2.1891217152.1533757572; __utmz=124869784.1537729898.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utma=124869784.1891217152.1533757572.1539272325.1544456566.3; _gid=GA1.2.1672824743.1547777052; _csrf=1756e81b325bfeca4b1db665e46e89b8be48b8b11a959096071fb216249eaa93a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228ewBX2QW7PpYItGDTkhKEXtbsV95D9jO%22%3B%7D; PHPSESSID=udtbekh90ufcsk58vppgv9iot2'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at coronado.colservers.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'coronado.colservers.com'
+    'SERVER_ADDR' => '192.168.1.5'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.1.2'
+    'DOCUMENT_ROOT' => '/home/calete/public_html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/calete/public_html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/calete/public_html/coronado/index.php'
+    'REMOTE_PORT' => '46666'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => '_pjax=%23p0'
+    'REQUEST_URI' => '/index.php/usuarios/create?_pjax=%23p0'
+    'SCRIPT_NAME' => '/index.php'
+    'PATH_INFO' => '/usuarios/create'
+    'PATH_TRANSLATED' => '/home/calete/public_html/coronado/usuarios/create'
+    'PHP_SELF' => '/index.php/usuarios/create'
+    'REQUEST_TIME_FLOAT' => 1547851376.322
+    'REQUEST_TIME' => 1547851376
+]
+2019-01-18 22:42:56 [192.168.1.2][-][udtbekh90ufcsk58vppgv9iot2][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: app\models\Attach::file1 in /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/Component.php:154
+Stack trace:
+#0 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/db/BaseActiveRecord.php(296): yii\base\Component->__get('file1')
+#1 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/helpers/BaseHtml.php(2193): yii\db\BaseActiveRecord->__get('file1')
+#2 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/helpers/BaseHtml.php(1323): yii\helpers\BaseHtml::getAttributeValue(Object(app\models\Attach), 'file1')
+#3 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/helpers/BaseHtml.php(1470): yii\helpers\BaseHtml::activeInput('file', Object(app\models\Attach), 'file1', Array)
+#4 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/widgets/ActiveField.php(488): yii\helpers\BaseHtml::activeFileInput(Object(app\models\Attach), 'file1', Array)
+#5 /home/calete/public_html/coronado/framework/views/usuarios/_form.php(20): yii\widgets\ActiveField->fileInput()
+#6 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/View.php(336): require('/home/calete/pu...')
+#7 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/home/calete/pu...', Array)
+#8 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/calete/pu...', Array, NULL)
+#9 /home/calete/public_html/coronado/framework/views/usuarios/create.php(18): yii\base\View->render('_form', Array)
+#10 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/View.php(336): require('/home/calete/pu...')
+#11 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/home/calete/pu...', Array)
+#12 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/calete/pu...', Array, Object(app\controllers\UsuariosController))
+#13 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('create', Array, Object(app\controllers\UsuariosController))
+#14 /home/calete/public_html/coronado/framework/controllers/UsuariosController.php(81): yii\base\Controller->render('create', Array)
+#15 [internal function]: app\controllers\UsuariosController->actionCreate()
+#16 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#17 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#18 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('create', Array)
+#19 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('usuarios/create', Array)
+#20 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 /home/calete/public_html/coronado/index.php(12): yii\base\Application->run()
+#22 {main}
+2019-01-18 22:42:56 [192.168.1.2][-][udtbekh90ufcsk58vppgv9iot2][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.2.1891217152.1533757572'
+    '__utmz' => '124869784.1537729898.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '__utma' => '124869784.1891217152.1533757572.1539272325.1544456566.3'
+    '_gid' => 'GA1.2.1672824743.1547777052'
+    '_csrf' => '1756e81b325bfeca4b1db665e46e89b8be48b8b11a959096071fb216249eaa93a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8ewBX2QW7PpYItGDTkhKEXtbsV95D9jO\";}'
+    'PHPSESSID' => 'udtbekh90ufcsk58vppgv9iot2'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php/usuarios/create'
+    'SCRIPT_URI' => 'http://coronado.colservers.com/index.php/usuarios/create'
+    'HTTP_HOST' => 'coronado.colservers.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://coronado.colservers.com/index.php/usuarios'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-CO,es;q=0.9,en-US;q=0.8,en;q=0.7,es-419;q=0.6'
+    'HTTP_COOKIE' => '_ga=GA1.2.1891217152.1533757572; __utmz=124869784.1537729898.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utma=124869784.1891217152.1533757572.1539272325.1544456566.3; _gid=GA1.2.1672824743.1547777052; _csrf=1756e81b325bfeca4b1db665e46e89b8be48b8b11a959096071fb216249eaa93a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228ewBX2QW7PpYItGDTkhKEXtbsV95D9jO%22%3B%7D; PHPSESSID=udtbekh90ufcsk58vppgv9iot2'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at coronado.colservers.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'coronado.colservers.com'
+    'SERVER_ADDR' => '192.168.1.5'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.1.2'
+    'DOCUMENT_ROOT' => '/home/calete/public_html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/calete/public_html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/calete/public_html/coronado/index.php'
+    'REMOTE_PORT' => '46667'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/index.php/usuarios/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PATH_INFO' => '/usuarios/create'
+    'PATH_TRANSLATED' => '/home/calete/public_html/coronado/usuarios/create'
+    'PHP_SELF' => '/index.php/usuarios/create'
+    'REQUEST_TIME_FLOAT' => 1547851376.364
+    'REQUEST_TIME' => 1547851376
+]
+2019-01-18 22:47:53 [192.168.1.2][-][udtbekh90ufcsk58vppgv9iot2][error][Error] Error: Class 'app\controllers\UploadedFile' not found in /home/calete/public_html/coronado/framework/controllers/UsuariosController.php:73
+Stack trace:
+#0 [internal function]: app\controllers\UsuariosController->actionCreate()
+#1 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#3 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('create', Array)
+#4 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('usuarios/create', Array)
+#5 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /home/calete/public_html/coronado/index.php(12): yii\base\Application->run()
+#7 {main}
+2019-01-18 22:47:53 [192.168.1.2][-][udtbekh90ufcsk58vppgv9iot2][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'tDT5pkDASHvC8yC2CWetGRtsafYFZRZuSMIG6mvMi6-MUY7kGPIZLPWjUO9AE-pdTwcBvUA9Ygw7lD_fL_Xh4A=='
+    'Usuarios' => [
+        'cliente_id' => '1'
+        'nombres' => 'sfsdf'
+        'apellidos' => 'sdfdsfsf'
+    ]
+    'Attach' => [
+        'file1' => ''
+        'file2' => ''
+    ]
+]
+
+$_FILES = [
+    'Attach' => [
+        'name' => [
+            'file1' => 'icons_ns8.png'
+            'file2' => 'cable-crimping.jpg'
+        ]
+        'type' => [
+            'file1' => 'image/png'
+            'file2' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'file1' => '/tmp/phprAni6X'
+            'file2' => '/tmp/phpPzFwFn'
+        ]
+        'error' => [
+            'file1' => 0
+            'file2' => 0
+        ]
+        'size' => [
+            'file1' => 10917
+            'file2' => 245984
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.2.1891217152.1533757572'
+    '__utmz' => '124869784.1537729898.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '__utma' => '124869784.1891217152.1533757572.1539272325.1544456566.3'
+    '_gid' => 'GA1.2.1672824743.1547777052'
+    '_csrf' => '1756e81b325bfeca4b1db665e46e89b8be48b8b11a959096071fb216249eaa93a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8ewBX2QW7PpYItGDTkhKEXtbsV95D9jO\";}'
+    'PHPSESSID' => 'udtbekh90ufcsk58vppgv9iot2'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php/usuarios/create'
+    'SCRIPT_URI' => 'http://coronado.colservers.com/index.php/usuarios/create'
+    'HTTP_HOST' => 'coronado.colservers.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '257964'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://coronado.colservers.com'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundary2KKv4e7rDQ2Z33xd'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://coronado.colservers.com/index.php/usuarios/create'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-CO,es;q=0.9,en-US;q=0.8,en;q=0.7,es-419;q=0.6'
+    'HTTP_COOKIE' => '_ga=GA1.2.1891217152.1533757572; __utmz=124869784.1537729898.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utma=124869784.1891217152.1533757572.1539272325.1544456566.3; _gid=GA1.2.1672824743.1547777052; _csrf=1756e81b325bfeca4b1db665e46e89b8be48b8b11a959096071fb216249eaa93a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228ewBX2QW7PpYItGDTkhKEXtbsV95D9jO%22%3B%7D; PHPSESSID=udtbekh90ufcsk58vppgv9iot2'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at coronado.colservers.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'coronado.colservers.com'
+    'SERVER_ADDR' => '192.168.1.5'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.1.2'
+    'DOCUMENT_ROOT' => '/home/calete/public_html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/calete/public_html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/calete/public_html/coronado/index.php'
+    'REMOTE_PORT' => '47115'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/index.php/usuarios/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PATH_INFO' => '/usuarios/create'
+    'PATH_TRANSLATED' => '/home/calete/public_html/coronado/usuarios/create'
+    'PHP_SELF' => '/index.php/usuarios/create'
+    'REQUEST_TIME_FLOAT' => 1547851673.057
+    'REQUEST_TIME' => 1547851673
+]
+2019-01-18 22:48:13 [192.168.1.2][-][udtbekh90ufcsk58vppgv9iot2][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: app\models\Attach::dta in /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/Component.php:209
+Stack trace:
+#0 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/db/BaseActiveRecord.php(322): yii\base\Component->__set('dta', 'iVBORw0KGgoAAAA...')
+#1 /home/calete/public_html/coronado/framework/controllers/UsuariosController.php(79): yii\db\BaseActiveRecord->__set('dta', 'iVBORw0KGgoAAAA...')
+#2 [internal function]: app\controllers\UsuariosController->actionCreate()
+#3 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#4 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#5 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('create', Array)
+#6 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('usuarios/create', Array)
+#7 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /home/calete/public_html/coronado/index.php(12): yii\base\Application->run()
+#9 {main}
+2019-01-18 22:48:13 [192.168.1.2][-][udtbekh90ufcsk58vppgv9iot2][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'tDT5pkDASHvC8yC2CWetGRtsafYFZRZuSMIG6mvMi6-MUY7kGPIZLPWjUO9AE-pdTwcBvUA9Ygw7lD_fL_Xh4A=='
+    'Usuarios' => [
+        'cliente_id' => '1'
+        'nombres' => 'sfsdf'
+        'apellidos' => 'sdfdsfsf'
+    ]
+    'Attach' => [
+        'file1' => ''
+        'file2' => ''
+    ]
+]
+
+$_FILES = [
+    'Attach' => [
+        'name' => [
+            'file1' => 'icons_ns8.png'
+            'file2' => 'cable-crimping.jpg'
+        ]
+        'type' => [
+            'file1' => 'image/png'
+            'file2' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'file1' => '/tmp/phpOe2QIe'
+            'file2' => '/tmp/php3mnBUU'
+        ]
+        'error' => [
+            'file1' => 0
+            'file2' => 0
+        ]
+        'size' => [
+            'file1' => 10917
+            'file2' => 245984
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.2.1891217152.1533757572'
+    '__utmz' => '124869784.1537729898.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '__utma' => '124869784.1891217152.1533757572.1539272325.1544456566.3'
+    '_gid' => 'GA1.2.1672824743.1547777052'
+    '_csrf' => '1756e81b325bfeca4b1db665e46e89b8be48b8b11a959096071fb216249eaa93a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8ewBX2QW7PpYItGDTkhKEXtbsV95D9jO\";}'
+    'PHPSESSID' => 'udtbekh90ufcsk58vppgv9iot2'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php/usuarios/create'
+    'SCRIPT_URI' => 'http://coronado.colservers.com/index.php/usuarios/create'
+    'HTTP_HOST' => 'coronado.colservers.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '257964'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://coronado.colservers.com'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundary2KKv4e7rDQ2Z33xd'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://coronado.colservers.com/index.php/usuarios/create'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-CO,es;q=0.9,en-US;q=0.8,en;q=0.7,es-419;q=0.6'
+    'HTTP_COOKIE' => '_ga=GA1.2.1891217152.1533757572; __utmz=124869784.1537729898.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utma=124869784.1891217152.1533757572.1539272325.1544456566.3; _gid=GA1.2.1672824743.1547777052; _csrf=1756e81b325bfeca4b1db665e46e89b8be48b8b11a959096071fb216249eaa93a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228ewBX2QW7PpYItGDTkhKEXtbsV95D9jO%22%3B%7D; PHPSESSID=udtbekh90ufcsk58vppgv9iot2'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at coronado.colservers.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'coronado.colservers.com'
+    'SERVER_ADDR' => '192.168.1.5'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.1.2'
+    'DOCUMENT_ROOT' => '/home/calete/public_html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/calete/public_html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/calete/public_html/coronado/index.php'
+    'REMOTE_PORT' => '47148'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/index.php/usuarios/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PATH_INFO' => '/usuarios/create'
+    'PATH_TRANSLATED' => '/home/calete/public_html/coronado/usuarios/create'
+    'PHP_SELF' => '/index.php/usuarios/create'
+    'REQUEST_TIME_FLOAT' => 1547851693.054
+    'REQUEST_TIME' => 1547851693
+]
+2019-01-18 23:06:56 [192.168.1.2][-][udtbekh90ufcsk58vppgv9iot2][error][ParseError] ParseError: syntax error, unexpected end of file in /home/calete/public_html/coronado/framework/views/usuarios/view.php:47
+Stack trace:
+#0 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/home/calete/pu...', Array)
+#1 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/calete/pu...', Array, Object(app\controllers\UsuariosController))
+#2 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('view', Array, Object(app\controllers\UsuariosController))
+#3 /home/calete/public_html/coronado/framework/controllers/UsuariosController.php(57): yii\base\Controller->render('view', Array)
+#4 [internal function]: app\controllers\UsuariosController->actionView('1')
+#5 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#6 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('view', Array)
+#8 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('usuarios/view', Array)
+#9 /home/calete/public_html/coronado/framework/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /home/calete/public_html/coronado/index.php(12): yii\base\Application->run()
+#11 {main}
+2019-01-18 23:06:56 [192.168.1.2][-][udtbekh90ufcsk58vppgv9iot2][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.2.1891217152.1533757572'
+    '__utmz' => '124869784.1537729898.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    '__utma' => '124869784.1891217152.1533757572.1539272325.1544456566.3'
+    '_gid' => 'GA1.2.1672824743.1547777052'
+    '_csrf' => '1756e81b325bfeca4b1db665e46e89b8be48b8b11a959096071fb216249eaa93a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8ewBX2QW7PpYItGDTkhKEXtbsV95D9jO\";}'
+    'PHPSESSID' => 'udtbekh90ufcsk58vppgv9iot2'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php/usuarios/view'
+    'SCRIPT_URI' => 'http://coronado.colservers.com/index.php/usuarios/view'
+    'HTTP_HOST' => 'coronado.colservers.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://coronado.colservers.com/index.php/usuarios/update?id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-CO,es;q=0.9,en-US;q=0.8,en;q=0.7,es-419;q=0.6'
+    'HTTP_COOKIE' => '_ga=GA1.2.1891217152.1533757572; __utmz=124869784.1537729898.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utma=124869784.1891217152.1533757572.1539272325.1544456566.3; _gid=GA1.2.1672824743.1547777052; _csrf=1756e81b325bfeca4b1db665e46e89b8be48b8b11a959096071fb216249eaa93a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228ewBX2QW7PpYItGDTkhKEXtbsV95D9jO%22%3B%7D; PHPSESSID=udtbekh90ufcsk58vppgv9iot2'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.25 (Debian) Server at coronado.colservers.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.25 (Debian)'
+    'SERVER_NAME' => 'coronado.colservers.com'
+    'SERVER_ADDR' => '192.168.1.5'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.1.2'
+    'DOCUMENT_ROOT' => '/home/calete/public_html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/calete/public_html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/home/calete/public_html/coronado/index.php'
+    'REMOTE_PORT' => '48786'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=1'
+    'REQUEST_URI' => '/index.php/usuarios/view?id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PATH_INFO' => '/usuarios/view'
+    'PATH_TRANSLATED' => '/home/calete/public_html/coronado/usuarios/view'
+    'PHP_SELF' => '/index.php/usuarios/view'
+    'REQUEST_TIME_FLOAT' => 1547852816.067
+    'REQUEST_TIME' => 1547852816
+]
